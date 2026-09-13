@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brendalyne Cruz | Data & Business Analytics</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #4b5563;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-right: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #2563eb;
+            color: #2563eb;
+            background: white;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 45px;
+            color: #111827;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+            color: #4b5563;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .skill {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .project h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin: 3px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #eff6ff;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+            color: #4b5563;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Brendalyne Cruz</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1>Hi, I'm Brendalyne.</h1>
+
+            <h2>Data & Business Analytics</h2>
+
+            <p>
+                An Information Technology graduate specializing in Data and Business Analytics,
+                passionate about transforming data into meaningful insights that support
+                better decision-making.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="primary">View My Projects</a>
+                <a href="#contact" class="secondary">Contact Me</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+
+            <p>
+                I am an Information Technology graduate specializing in Data and Business
+                Analytics. I have experience working with data cleaning, data analysis,
+                visualization, dashboard development, and predictive analytics.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy using tools such as Python, Power BI, Excel, and SPSS to analyze
+                data and communicate insights in a clear and meaningful way.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="skills">
+
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Python</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Microsoft Excel</div>
+            <div class="skill">SPSS</div>
+            <div class="skill">Data Cleaning</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">Data Visualization</div>
+            <div class="skill">Predictive Analytics</div>
+            <div class="skill">Business Intelligence</div>
+            <div class="skill">Dashboard Development</div>
+
+        </div>
+
+    </section>
+
+
+    <section id="projects">
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>BustoSight</h3>
+
+                <p>
+                    A web-based Population Records and Predictive Decision Support System
+                    developed for the Municipality of Bustos, Bulacan.
+                </p>
+
+                <p>
+                    The project focuses on population data management, data quality,
+                    reporting, visualization, and predictive insights for decision-making.
+                </p>
+
+                <span class="tag">Data Analytics</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Python</span>
+                <span class="tag">Decision Support</span>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Top 50 U.S. Universities Dashboard</h3>
+
+                <p>
+                    An interactive dashboard analyzing the factors behind the rankings
+                    of the Top 50 Universities in the United States for 2025.
+                </p>
+
+                <p>
+                    The analysis explored university information and research/publication
+                    factors to identify patterns and insights.
+                </p>
+
+                <span class="tag">Power BI</span>
+                <span class="tag">Data Visualization</span>
+                <span class="tag">Business Intelligence</span>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Python Data Analysis</h3>
+
+                <p>
+                    A data analysis project using Python to clean, explore, and analyze
+                    business datasets and generate meaningful insights.
+                </p>
+
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">EDA</span>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Excel Business Dashboard</h3>
+
+                <p>
+                    An interactive Excel dashboard designed to organize business data,
+                    monitor key information, and support data-driven decision-making.
+                </p>
+
+                <span class="tag">Excel</span>
+                <span class="tag">Dashboard</span>
+                <span class="tag">Analytics</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p>
+            Interested in data analytics, business intelligence, and data-driven
+            decision-making.
+        </p>
+
+        <p>
+            You can connect with me through my professional profiles and portfolio.
+        </p>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 Brendalyne Cruz. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
