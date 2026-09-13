@@ -6,6 +6,9 @@
 
     <title>Brendalyne Cruz | Data & Business Analytics</title>
 
+    <meta name="description"
+        content="Brendalyne Cruz's portfolio showcasing Data and Business Analytics projects, skills, and certifications.">
+
     <style>
         * {
             margin: 0;
@@ -15,201 +18,548 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f7f9fc;
-            color: #1f2937;
-            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #172033;
+            line-height: 1.7;
         }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: white;
-            padding: 18px 8%;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e5e7eb;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
 
         .logo {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 23px;
+            font-weight: 700;
             color: #2563eb;
         }
 
-        nav ul {
+        .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 30px;
             list-style: none;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #374151;
+        .nav-links a {
+            font-size: 16px;
             font-weight: 500;
+            color: #374151;
+            transition: 0.3s;
         }
 
-        nav a:hover {
+        .nav-links a:hover {
             color: #2563eb;
         }
 
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
-            min-height: 90vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
-            padding: 70px 8%;
-            background: linear-gradient(135deg, #eff6ff, #ffffff);
+            background:
+                radial-gradient(circle at 85% 25%, #dbeafe 0, transparent 28%),
+                linear-gradient(135deg, #f8fbff, #ffffff);
         }
 
-        .hero-content {
-            max-width: 800px;
+        .hero-container {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+            padding: 80px 25px;
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text .small-title {
+            color: #2563eb;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
         .hero h1 {
-            font-size: 56px;
-            margin-bottom: 10px;
+            font-size: clamp(45px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
             color: #111827;
         }
 
         .hero h2 {
-            font-size: 28px;
             color: #2563eb;
-            margin-bottom: 20px;
+            font-size: clamp(24px, 3vw, 36px);
+            margin-bottom: 22px;
         }
 
         .hero p {
+            max-width: 680px;
             font-size: 18px;
             color: #4b5563;
-            max-width: 700px;
             margin-bottom: 30px;
         }
 
-        .buttons a {
-            display: inline-block;
-            padding: 12px 22px;
-            margin-right: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .primary {
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
             background: #2563eb;
             color: white;
         }
 
-        .secondary {
-            border: 1px solid #2563eb;
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1.5px solid #2563eb;
             color: #2563eb;
             background: white;
         }
 
+        .btn-outline:hover {
+            background: #eff6ff;
+            transform: translateY(-2px);
+        }
+
+        .hero-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+            text-align: center;
+        }
+
+        .profile-circle {
+            width: 155px;
+            height: 155px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb, #60a5fa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 52px;
+            font-weight: bold;
+        }
+
+        .hero-card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .hero-card p {
+            font-size: 14px;
+            margin: 0;
+            color: #6b7280;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
         section {
-            padding: 80px 8%;
+            padding: 90px 25px;
+        }
+
+        .section-container {
+            max-width: 1050px;
+            margin: auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 34px;
-            margin-bottom: 45px;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
             color: #111827;
+            margin-bottom: 10px;
         }
 
-        .about {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            font-size: 17px;
-            color: #4b5563;
+        .section-title p {
+            color: #6b7280;
         }
 
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            max-width: 1000px;
-            margin: auto;
-        }
+        /* =========================
+           ABOUT
+        ========================= */
 
-        .skill {
+        #about {
             background: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-            font-weight: bold;
         }
 
-        .projects {
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        .info-box {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+            padding: 28px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .info-item span {
+            color: #6b7280;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 25px 18px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #93c5fd;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .skill-card .icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card h3 {
+            font-size: 16px;
+            color: #1f2937;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        #projects {
+            background: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
-        .project {
-            background: white;
-            padding: 28px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        .project-card {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
         }
 
-        .project h3 {
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .project-number {
             color: #2563eb;
+            font-weight: bold;
+            font-size: 14px;
             margin-bottom: 10px;
         }
 
-        .project p {
-            color: #4b5563;
-            margin-bottom: 15px;
+        .project-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .project-card .project-type {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #5b6472;
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
         }
 
         .tag {
-            display: inline-block;
-            background: #eff6ff;
-            color: #2563eb;
+            background: #dbeafe;
+            color: #1d4ed8;
             padding: 5px 10px;
             border-radius: 20px;
-            font-size: 13px;
-            margin: 3px;
+            font-size: 12px;
+            font-weight: 600;
         }
 
-        .contact {
+        .project-link {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           CERTIFICATION
+        ========================= */
+
+        .certification-card {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: 35px;
             text-align: center;
-            background: #eff6ff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
         }
 
-        .contact p {
-            margin-bottom: 10px;
-            color: #4b5563;
+        .cert-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
         }
+
+        .certification-card h3 {
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .certification-card p {
+            color: #6b7280;
+        }
+
+        /* =========================
+           RESUME
+        ========================= */
+
+        .resume-section {
+            background: #eff6ff;
+            text-align: center;
+        }
+
+        .resume-section h2 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .resume-section p {
+            color: #5b6472;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            border-color: #93c5fd;
+            transform: translateY(-3px);
+        }
+
+        .contact-card .icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card h3 {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .contact-card a {
+            color: #2563eb;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            text-align: center;
-            padding: 25px;
             background: #111827;
             color: white;
+            text-align: center;
+            padding: 28px 20px;
         }
 
-        @media (max-width: 700px) {
-            nav {
+        footer p {
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-card {
+                max-width: 350px;
+                margin: auto;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .nav-container {
                 flex-direction: column;
                 gap: 12px;
             }
 
-            nav ul {
-                gap: 12px;
+            .nav-links {
+                gap: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            .hero h1 {
-                font-size: 40px;
+            .hero {
+                min-height: auto;
             }
 
-            .hero h2 {
-                font-size: 22px;
+            .hero-container {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: 65px 18px;
+            }
+
+            .section-title h2 {
+                font-size: 31px;
             }
         }
     </style>
@@ -217,162 +567,432 @@
 
 <body>
 
-    <nav>
-        <div class="logo">Brendalyne Cruz</div>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav>
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                Brendalyne Cruz
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certification">Certification</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
 
-            <h1>Hi, I'm Brendalyne.</h1>
+    <!-- =========================
+         HERO
+    ========================== -->
 
-            <h2>Data & Business Analytics</h2>
+    <section class="hero" id="home">
 
-            <p>
-                An Information Technology graduate specializing in Data and Business Analytics,
-                passionate about transforming data into meaningful insights that support
-                better decision-making.
-            </p>
+        <div class="hero-container">
 
-            <div class="buttons">
-                <a href="#projects" class="primary">View My Projects</a>
-                <a href="#contact" class="secondary">Contact Me</a>
+            <div class="hero-text">
+
+                <div class="small-title">
+                    Hello, I'm
+                </div>
+
+                <h1>
+                    Brendalyne.
+                </h1>
+
+                <h2>
+                    Data & Business Analytics
+                </h2>
+
+                <p>
+                    An Information Technology graduate specializing in
+                    Data and Business Analytics, passionate about transforming
+                    data into meaningful insights that support better
+                    decision-making.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="profile-circle">
+                    BC
+                </div>
+
+                <h3>
+                    Brendalyne Cruz
+                </h3>
+
+                <p>
+                    Information Technology
+                </p>
+
+                <p>
+                    Data & Business Analytics
+                </p>
+
             </div>
 
         </div>
+
     </section>
 
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
     <section id="about">
 
-        <h2 class="section-title">About Me</h2>
+        <div class="section-container">
 
-        <div class="about">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Get to know me and my background.</p>
+            </div>
 
-            <p>
-                I am an Information Technology graduate specializing in Data and Business
-                Analytics. I have experience working with data cleaning, data analysis,
-                visualization, dashboard development, and predictive analytics.
-            </p>
 
-            <br>
+            <div class="about-grid">
 
-            <p>
-                I enjoy using tools such as Python, Power BI, Excel, and SPSS to analyze
-                data and communicate insights in a clear and meaningful way.
-            </p>
+                <div class="about-text">
+
+                    <p>
+                        I am an Information Technology graduate specializing
+                        in Data and Business Analytics. I am interested in
+                        using data to identify patterns, generate insights,
+                        and support informed business decisions.
+                    </p>
+
+                    <p>
+                        My experience includes working with data cleaning,
+                        exploratory data analysis, visualization, dashboard
+                        development, and predictive analytics.
+                    </p>
+
+                    <p>
+                        I enjoy turning raw and complex data into clear,
+                        meaningful information through tools such as Python,
+                        Power BI, Excel, and SPSS.
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-item">
+                        <strong>Education</strong>
+                        <span>
+                            Bachelor of Science in Information Technology
+                        </span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Specialization</strong>
+                        <span>
+                            Data and Business Analytics
+                        </span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Focus Areas</strong>
+                        <span>
+                            Data Analysis, Business Intelligence,
+                            Data Visualization, Predictive Analytics
+                        </span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Based in</strong>
+                        <span>
+                            Philippines
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
 
     <section id="skills">
 
-        <h2 class="section-title">Skills</h2>
+        <div class="section-container">
 
-        <div class="skills">
+            <div class="section-title">
+                <h2>Skills</h2>
+                <p>Tools and areas I work with.</p>
+            </div>
 
-            <div class="skill">Python</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Microsoft Excel</div>
-            <div class="skill">SPSS</div>
-            <div class="skill">Data Cleaning</div>
-            <div class="skill">Data Analysis</div>
-            <div class="skill">Data Visualization</div>
-            <div class="skill">Predictive Analytics</div>
-            <div class="skill">Business Intelligence</div>
-            <div class="skill">Dashboard Development</div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="icon">🐍</div>
+                    <h3>Python</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">📊</div>
+                    <h3>Power BI</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">📗</div>
+                    <h3>Microsoft Excel</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">📈</div>
+                    <h3>Data Analysis</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">🧹</div>
+                    <h3>Data Cleaning</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">📉</div>
+                    <h3>Data Visualization</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">🔬</div>
+                    <h3>SPSS</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">🔮</div>
+                    <h3>Predictive Analytics</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">💡</div>
+                    <h3>Business Intelligence</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">📊</div>
+                    <h3>Dashboard Development</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">🎯</div>
+                    <h3>Decision Support</h3>
+                </div>
+
+                <div class="skill-card">
+                    <div class="icon">📋</div>
+                    <h3>Reporting</h3>
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
 
     <section id="projects">
 
-        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-container">
 
-        <div class="projects">
-
-            <div class="project">
-
-                <h3>BustoSight</h3>
-
+            <div class="section-title">
+                <h2>Featured Projects</h2>
                 <p>
-                    A web-based Population Records and Predictive Decision Support System
-                    developed for the Municipality of Bustos, Bulacan.
+                    Selected projects showcasing my data and analytics experience.
                 </p>
-
-                <p>
-                    The project focuses on population data management, data quality,
-                    reporting, visualization, and predictive insights for decision-making.
-                </p>
-
-                <span class="tag">Data Analytics</span>
-                <span class="tag">Power BI</span>
-                <span class="tag">Python</span>
-                <span class="tag">Decision Support</span>
-
             </div>
 
 
-            <div class="project">
-
-                <h3>Top 50 U.S. Universities Dashboard</h3>
-
-                <p>
-                    An interactive dashboard analyzing the factors behind the rankings
-                    of the Top 50 Universities in the United States for 2025.
-                </p>
-
-                <p>
-                    The analysis explored university information and research/publication
-                    factors to identify patterns and insights.
-                </p>
-
-                <span class="tag">Power BI</span>
-                <span class="tag">Data Visualization</span>
-                <span class="tag">Business Intelligence</span>
-
-            </div>
+            <div class="projects-grid">
 
 
-            <div class="project">
+                <!-- PROJECT 1 -->
 
-                <h3>Python Data Analysis</h3>
+                <div class="project-card">
 
-                <p>
-                    A data analysis project using Python to clean, explore, and analyze
-                    business datasets and generate meaningful insights.
-                </p>
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
 
-                <span class="tag">Python</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">EDA</span>
+                    <h3>
+                        BustoSight
+                    </h3>
 
-            </div>
+                    <div class="project-type">
+                        Population Records & Predictive Decision Support System
+                    </div>
+
+                    <p>
+                        A web-based population records and predictive
+                        decision support system developed for the Municipality
+                        of Bustos, Bulacan. The project focuses on improving
+                        population data management, reporting, visualization,
+                        and decision support.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Data Analytics</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Predictive Analytics</span>
+                    </div>
+
+                    <a
+                        href="https://busto-sight.vercel.app/"
+                        target="_blank"
+                        class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
 
 
-            <div class="project">
+                <!-- PROJECT 2 -->
 
-                <h3>Excel Business Dashboard</h3>
+                <div class="project-card">
 
-                <p>
-                    An interactive Excel dashboard designed to organize business data,
-                    monitor key information, and support data-driven decision-making.
-                </p>
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
 
-                <span class="tag">Excel</span>
-                <span class="tag">Dashboard</span>
-                <span class="tag">Analytics</span>
+                    <h3>
+                        Top 50 U.S. Universities for 2025
+                    </h3>
+
+                    <div class="project-type">
+                        Power BI Interactive Dashboard
+                    </div>
+
+                    <p>
+                        An interactive Power BI dashboard analyzing the
+                        Top 50 universities in the United States for 2025.
+                        The dashboard explores ranking-related factors,
+                        including research and publication information,
+                        to present data in a clear and interactive format.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Data Visualization</span>
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">Data Analysis</span>
+                    </div>
+
+                    <span class="project-link">
+                        Dashboard Project
+                    </span>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        Python Sales Data Analysis
+                    </h3>
+
+                    <div class="project-type">
+                        Exploratory Data Analysis
+                    </div>
+
+                    <p>
+                        A Python-based analytics project focused on cleaning
+                        business data, exploring sales patterns, identifying
+                        trends, and generating insights that can support
+                        business decision-making.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">EDA</span>
+                        <span class="tag">Data Cleaning</span>
+                        <span class="tag">Visualization</span>
+                    </div>
+
+                    <span class="project-link">
+                        Coming Soon
+                    </span>
+
+                </div>
+
+
+                <!-- PROJECT 4 -->
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 04
+                    </div>
+
+                    <h3>
+                        Excel Business Dashboard
+                    </h3>
+
+                    <div class="project-type">
+                        Business Intelligence & Reporting
+                    </div>
+
+                    <p>
+                        An Excel-based dashboard designed to organize,
+                        summarize, and visualize business data through
+                        interactive reports and key performance indicators.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag">Dashboard</span>
+                        <span class="tag">KPI</span>
+                        <span class="tag">Reporting</span>
+                    </div>
+
+                    <span class="project-link">
+                        Coming Soon
+                    </span>
+
+                </div>
 
             </div>
 
@@ -381,25 +1001,188 @@
     </section>
 
 
-    <section id="contact" class="contact">
+    <!-- =========================
+         CERTIFICATION
+    ========================== -->
 
-        <h2 class="section-title">Let's Connect</h2>
+    <section id="certification">
 
-        <p>
-            Interested in data analytics, business intelligence, and data-driven
-            decision-making.
-        </p>
+        <div class="section-container">
 
-        <p>
-            You can connect with me through my professional profiles and portfolio.
-        </p>
+            <div class="section-title">
+                <h2>Certification</h2>
+                <p>Professional learning and credentials.</p>
+            </div>
+
+
+            <div class="certification-card">
+
+                <div class="cert-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Associate Data Analyst Certification
+                </h3>
+
+                <p>
+                    DataCamp
+                </p>
+
+                <p>
+                    August 2026
+                </p>
+
+            </div>
+
+        </div>
 
     </section>
 
 
+    <!-- =========================
+         RESUME
+    ========================== -->
+
+    <section class="resume-section">
+
+        <div class="section-container">
+
+            <h2>
+                Interested in working with me?
+            </h2>
+
+            <p>
+                View my resume to learn more about my education,
+                skills, projects, and experience.
+            </p>
+
+            <!--
+                IMPORTANT:
+                Replace YOUR-CV-LINK-HERE with your actual CV link.
+            -->
+
+            <a
+                href="YOUR-CV-LINK-HERE"
+                target="_blank"
+                class="btn btn-primary">
+                View My CV
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <h2>
+                    Let's Connect
+                </h2>
+
+                <p>
+                    Feel free to reach out for opportunities,
+                    collaborations, or professional inquiries.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-card">
+
+                    <div class="icon">
+                        ✉️
+                    </div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <!-- Replace with your email -->
+                    <a href="mailto:YOUR-EMAIL-HERE">
+                        YOUR-EMAIL-HERE
+                    </a>
+
+                </div>
+
+
+                <!-- LINKEDIN -->
+
+                <div class="contact-card">
+
+                    <div class="icon">
+                        💼
+                    </div>
+
+                    <h3>
+                        LinkedIn
+                    </h3>
+
+                    <a
+                        href="https://www.linkedin.com/in/brendalyne-cruz-6aa9a7347/"
+                        target="_blank">
+                        LinkedIn Profile
+                    </a>
+
+                </div>
+
+
+                <!-- GITHUB -->
+
+                <div class="contact-card">
+
+                    <div class="icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <a
+                        href="https://github.com/dang31"
+                        target="_blank">
+                        github.com/dang31
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
-        <p>© 2026 Brendalyne Cruz. All rights reserved.</p>
+
+        <p>
+            © 2026 Brendalyne Cruz. All rights reserved.
+        </p>
+
+        <p>
+            Data & Business Analytics Portfolio
+        </p>
+
     </footer>
+
 
 </body>
 </html>
